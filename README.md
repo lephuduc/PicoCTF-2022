@@ -8,11 +8,11 @@
 
 # file-run1
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/88520787/168028354-0cda410a-efc5-479b-99fe-f3ada12b311c.png)
 
 Đây chỉ là bài warm-up nên sẽ khá là dễ nên ta chỉ cần dùng các lệnh mà `hints` có:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/88520787/168028410-0e48b03f-5754-49d2-84f6-4fe8fd5e3b26.png)
 
 GIải thích:
 
@@ -21,15 +21,15 @@ GIải thích:
 
 # file-run2
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/88520787/168029042-b0b17508-7c59-41b1-ad1a-698fd1b86e77.png)
 
 Ở bài này, ta không thể chạy như bài trước nữa
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/88520787/168029245-aab0128b-9b19-419f-a86d-6e64b47ec981.png)
 
 thay vào đó ta cần truyền cho file một `parameter` là “Hello!” (theo như đề bài gợi ý), cú pháp như sau:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/88520787/168029278-1b5cc365-0345-45cd-ad4c-025fcaf93e59.png)
 
 Giải thích:
 
@@ -49,11 +49,11 @@ Các parameter này sẽ lưu theo thứ tự vào `argv[1] argv[2]... ...` , m�
 
 # **GDB Test Drive**
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/88520787/168029388-274cb749-50b6-4f09-a4a3-a01d63294b34.png)
 
 Bài này ta chỉ cần dùng các câu lệnh có sẵn của đề, nhưng sau đây tôi sẽ kèm theo các lời giải thích
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/88520787/168029421-5a59ed3f-cf1e-4690-aff5-44a215d99beb.png)
 
 Tại đây, đối với những bạn chưa cài `gdb` và bị báo lỗi thì dùng lệnh`sudo apt-get install gdb` linux để cho máy tự cài gdb, sau đó chạy lại các lệnh trên.
 
@@ -62,81 +62,81 @@ Tại đây, đối với những bạn chưa cài `gdb` và bị báo lỗi th�
 
 Dùng `layout asm` ta được màn hình như sau:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/88520787/168029460-1f7632b8-b94f-4757-8f32-3f497c7765f9.png)
 
 `break *(main+99):` đặt breakpoint tại vị trí (`main` +99)
 
 Sau khi dùng `run`: ta được màn hình như sau:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/88520787/168029494-0d26b0ce-dae4-475d-a6ca-7464e779aafe.png)
 
 Tại đây, để bỏ qua lời gọi hàm `sleep` thì ta dùng `jump *(main+104)` để nhảy trực tiếp đến câu lệnh tiếp theo, từ đây, chương trình sẽ có thể in ra flag.
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/88520787/168029522-fc033623-5294-44df-b8e1-0c5dcc48c351.png)
 
 # patchme.py
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/88520787/168029787-625b25ef-2dcf-4ccd-a2a2-f515bd040236.png)
 
 Ở bài này ta tải 2 file về và đặt chung vào cùng 1 folder, và bạn cần cài thêm [python](http://python.org) phiên bản 3. trở lên
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/88520787/168029816-49d8046b-c2a7-48ed-98ae-4409bfa89ab6.png)
 
 Chạy file, ta thấy file kiểm tra password ta nhập vào, mở file bằng [VScode](https://code.visualstudio.com/):
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2012.png)
+![Untitled 12](https://user-images.githubusercontent.com/88520787/168029837-d31a03a3-df98-4eed-ad36-e00ccdd232af.png)
 
 Ta không cần phải rev hàm str_xor, chương trình này khi ta nhập đúng `password` , flag sẽ tự động được giải mã và in ra màn hình.
 
 Chương trình sẽ lấy input của chúng ta và so sánh với chuỗi khác:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2013.png)
+![Untitled 13](https://user-images.githubusercontent.com/88520787/168029868-689e06a0-d1f8-4438-aee1-5132d5b00b53.png)
 
 ta có password: `ak98-=90adfjhgj321sleuth9000`
 
 Nhập password, ta được flag:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2014.png)
+![Untitled 14](https://user-images.githubusercontent.com/88520787/168029897-86ce1665-03e3-46c6-b127-39cf44074994.png)
 
 # Safe Opener
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2015.png)
+![Untitled 15](https://user-images.githubusercontent.com/88520787/168029922-8f1ef4a9-a4b1-44a8-989f-957b918d563a.png)
 
 Tải file về ta thấy đó là 1 file java, nhưng trong bài này ta không cần phải chạy file
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2016.png)
+![Untitled 16](https://user-images.githubusercontent.com/88520787/168029944-ca2dedba-ad73-42cd-844f-0d34531ea757.png)
 
 Đọc code ta thấy đề sẽ lấy `password` từ input của người dùng sau đó mã hóa và so sánh với chuỗi đã được mã hóa sẵn của chương trình.
 
 Để ý ta sẽ thấy chương trình dùng base64 để encode
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2017.png)
+![Untitled 17](https://user-images.githubusercontent.com/88520787/168029994-3ac8aa39-5d14-442a-86e7-e0ad1a31e8ef.png)
 
 Đồng nghĩa với ta sẽ có đoạn mã base64 của password:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2018.png)
+![Untitled 18](https://user-images.githubusercontent.com/88520787/168030029-8c806226-8fed-4b7d-9868-0d2bff554508.png)
 
 Decode base64 của đoạn này ta được password: 
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2019.png)
+![Untitled 19](https://user-images.githubusercontent.com/88520787/168030048-983835a2-7658-4a5a-ae07-df4840824099.png)
 
 Flag: `picoCTF{pl3as3_l3t_m3_1nt0_th3_saf}`
 
 # unpackme.py
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2020.png)
+![Untitled 20](https://user-images.githubusercontent.com/88520787/168030086-0d9a9dbb-24eb-4cfd-8abd-a7c9d91cc4c9.png)
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2021.png)
+![Untitled 21](https://user-images.githubusercontent.com/88520787/168030116-9867be62-c66a-4753-a8f4-e280d38f0114.png)
 
 Mở file lên ta thấy chương trình dịch mã đoạn text dài trên và dùng hàm `exec()` để thực thi đoạn mã đó, thay vì thực thi, ta thử `print` nó ra:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2022.png)
+![Untitled 22](https://user-images.githubusercontent.com/88520787/168030155-143eed9a-1d5c-4960-9245-3f9ec0552c9e.png)
 
 Và thay vì chạy, ta có ngay flag của bài!
 
 # bloat.py
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2023.png)
+![Untitled 23](https://user-images.githubusercontent.com/88520787/168030186-287bb97a-2832-49b0-a4b9-64b511963950.png)
 
 Tải 2 file về đặt trong cùng 1 thư mục:
 
@@ -187,19 +187,19 @@ sys.exit(0)
 
 Quan sát ta thấy có 1 hàm dùng để kiểm tra 2 chuỗi có bằng nhau hay không, ta tạm đặt tên hàm là check:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2024.png)
+![Untitled 24](https://user-images.githubusercontent.com/88520787/168030218-f7ce1874-4a1f-409a-9b31-7ac236f4d1df.png)
 
 `print` chuỗi đó ra, ta được: `happychance`
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2025.png)
+![Untitled 25](https://user-images.githubusercontent.com/88520787/168030247-8a7ed01a-7a32-4ee0-a984-cf04adeeb261.png)
 
 Nhập password vào chương trình, ta được flag:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2026.png)
+![Untitled 26](https://user-images.githubusercontent.com/88520787/168030264-7bd58267-4ae7-4329-83da-dead21db2086.png)
 
 # **Fresh Java**
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2027.png)
+![Untitled 27](https://user-images.githubusercontent.com/88520787/168030294-66b52661-b99d-47ca-a948-ee1dda05ae83.png)
 
 Đề sẽ cho mình một file `.class`, chúng ta có thể dùng tool để phân tích thành file `.java`
 
@@ -369,13 +369,13 @@ Tại đây, ta sẽ dễ dàng nhìn thấy các kí tự của flag, Sắp x�
 
 # Bbbbloat
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2028.png)
+![Untitled 28](https://user-images.githubusercontent.com/88520787/168030356-b55bd50e-8953-4566-8e79-d6de649f15b8.png)
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2029.png)
+![Untitled 29](https://user-images.githubusercontent.com/88520787/168030395-3a3400a8-41b5-443e-bc61-dbff914742a8.png)
 
 Kiểm tra file bằng Detect it Easy, ta biết được đây là file ELF64, mở file bằng IDA64bit:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2030.png)
+![Untitled 30](https://user-images.githubusercontent.com/88520787/168030417-bb3f38ac-999b-417d-a697-65458c2965cf.png)
 
 Chọn hàm main và bấm `F5` ta được đoạn code C như trên;
 
@@ -383,15 +383,15 @@ Phân tích code ta thấy chương trình bắt ta nhập vào 1 con số, nế
 
 Chạy file và nhập `549255` ta được flag:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2031.png)
+![Untitled 31](https://user-images.githubusercontent.com/88520787/168030457-4f7091c7-b9ff-49b7-8477-22318fadf70d.png)
 
 # unpackme
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2032.png)
+![Untitled 32](https://user-images.githubusercontent.com/88520787/168030479-1ec0a026-1363-47f4-9a34-956898c5df5e.png)
 
 Mở file bằng Detect it Easy:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2033.png)
+![Untitled 33](https://user-images.githubusercontent.com/88520787/168030502-16ba62d1-3ad6-4a8f-9f5f-598607c0644e.png)
 
 Ta thấy vẫn là file ELF64 và bị pack bởi UPX 3.95
 
@@ -399,39 +399,39 @@ UPX: một chương trình được sử dụng để nén các tệp thực thi
 
 Để unpack file này, ta dùng [UPX](https://github.com/upx/upx/releases/tag/v3.96) (tải và giải nén):
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2034.png)
+![Untitled 34](https://user-images.githubusercontent.com/88520787/168030528-0aac90fe-8ccc-48dd-bd33-52ac5b1c983e.png)
 
 copy file `unpackme-upx` và để chung thư mục với upx, mở cmd tại folder đó lên:
 
 dùng câu lệnh: `upx.exe -d unpackme-upx`
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2035.png)
+![Untitled 35](https://user-images.githubusercontent.com/88520787/168030565-1f65f09a-a895-4555-96ff-3f728aebc315.png)
 
 ta được file mới đã unpack, mở file này bằng IDA64:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2036.png)
+![Untitled 36](https://user-images.githubusercontent.com/88520787/168030591-837a67f1-e5b4-4058-a121-6238eeee85f9.png)
 
 Tương tự với bài trước ta tìm thấy con số cần nhập là `754653`:
 
 Chạy chương trình và nhập số vào ta được flag
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2037.png)
+![Untitled 37](https://user-images.githubusercontent.com/88520787/168030850-54b583e7-a9c3-40b1-bbd5-bd670f8b9d8d.png)
 
 # **Keygenme**
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2038.png)
+![Untitled 38](https://user-images.githubusercontent.com/88520787/168030873-e1d25493-d592-49e6-abbd-582806e442e0.png)
 
 Xem thông tin file bằng Detect it Easy:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2039.png)
+![Untitled 39](https://user-images.githubusercontent.com/88520787/168030900-02d5605d-b374-449e-a0d5-bd2a94ea8368.png)
 
 Mở file bằng IDA64, ta có hàm main:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2040.png)
+![Untitled 40](https://user-images.githubusercontent.com/88520787/168030923-d26f50f4-17e2-4a5b-9e3a-5758da31128f.png)
 
 và ta thấy hàm kiểm tra cũng chưa thấy gì:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2041.png)
+![Untitled 41](https://user-images.githubusercontent.com/88520787/168030945-fe153bb6-192b-4e26-9f45-edca73f2a450.png)
 
 Đặt breakpoint tại lệnh `if` và thử debug bằng Remote Linux debuger:
 
@@ -440,49 +440,49 @@ và ta thấy hàm kiểm tra cũng chưa thấy gì:
 - Chạy file `linux_server64` trên linux
 - tại IDA, chọn Debugger→Process Option: paste ip tìm được vào ô Hostname, bấm `Ok, use found`.
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2042.png)
+![Untitled 42](https://user-images.githubusercontent.com/88520787/168030968-22500ce0-e41a-41b9-8cc9-855cc15ec618.png)
 
 Kết quả là file đang được debug, nhập key rác bất kì
 
   
+![Untitled 43](https://user-images.githubusercontent.com/88520787/168030994-5afffbaf-8379-45c7-97ac-ded02a66e14e.png)
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2043.png)
 
 Khi chương trình chạy đến dòng lệnh `if` ta bấm F7 để step into (vào bên trong hàm) `sub_5621D0987208()`
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2044.png)
+![Untitled 44](https://user-images.githubusercontent.com/88520787/168031029-477a3593-41b8-40ba-9347-0c7b38bc167e.png)
 
 ta sẽ thấy xuất hiện nhiều lệnh `mov` và lệnh `lea` 2 lệnh này 
 
 Khi chạy hết các lệnh cho đến lệnh `jump` thì ta dừng lại để kiểm tra, lúc này trên stack ta xem thanh ghi `rax` thì ta thấy 1 phần của flag:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2045.png)
+![Untitled 45](https://user-images.githubusercontent.com/88520787/168031071-e8587d7b-8f79-47b8-b56a-1b7aea0b2cdb.png)
 
 Khi decompile được hàm trên, ta được đoạn code C như sau:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2046.png)
+![Untitled 46](https://user-images.githubusercontent.com/88520787/168031102-fb233e09-dcfe-419e-ac5e-14f784f01839.png)
 
 ta sẽ thấy tại đây khúc cuối có 1 loạt phép gán được thực hiện, kiểm tra phần giá trị gán thì ta thấy đó là những kí tự cuối cùng của flag
 
 Chạy hết đoạn này và ta xem giá trị của`v17`, và nó cũng chứa flag:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2047.png)
+![Untitled 47](https://user-images.githubusercontent.com/88520787/168031122-61aa105a-5bb1-4f2a-927c-83c88b62863a.png)
 
 # Wizardlike
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2048.png)
+![Untitled 48](https://user-images.githubusercontent.com/88520787/168031149-5c928715-d125-426c-8313-aaa03c54447c.png)
 
 Chạy file, ta được 1 trò chơi như sau:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2049.png)
+![Untitled 49](https://user-images.githubusercontent.com/88520787/168031185-8ae26fb3-de9c-46f6-a38e-b802c9eaa7e5.png)
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2050.png)
+![Untitled 50](https://user-images.githubusercontent.com/88520787/168031190-bb6cf1c6-7d71-492f-9e5c-e6913db08302.png)
 
 Khi nhân vật di chuyển đến `>` sẽ qua màn chơi tiếp theo, `<` sẽ quay lại màn chơi phía trước
 
 Tuy nhiên tại màn chơi thứ 4, ta không tiếp cận đươc `>`
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2051.png)
+![Untitled 51](https://user-images.githubusercontent.com/88520787/168031220-501e3239-f212-4bbf-9e39-580f442314c6.png)
 
 Mình thử kiểm tra file thì vẫn là ELF64 và không bị pack, đưa vào IDA64 ta được đoạn code như sau:
 
@@ -755,13 +755,12 @@ Việc của mình bây giờ đơn giản chỉ cần vô hiệu hóa đoạn k
 
 Có nhiều cách tiếp cận bài này, có thể chỉnh sửa byte trực tiếp bằng IDA:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2052.png)
+![Untitled 52](https://user-images.githubusercontent.com/88520787/168031289-55ad12c0-524b-4418-917f-1e7f32f321fb.png)
 
 Xem hàm `up` dưới dạng asm, ta để ý lệnh `jz` (jump if zero) sẽ là đoạn kiểm tra của `if` trong code C, ta có thể bỏ qua lệnh bằng cách: chọn vào lệnh cần chỉnh sửa, vào Edit→Patch Program→Assemble
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2053.png)
-
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2054.png)
+![Untitled 53](https://user-images.githubusercontent.com/88520787/168031316-d13bea85-43d5-48ec-a544-a347fc054e27.png)
+![Untitled 54](https://user-images.githubusercontent.com/88520787/168031329-917a4be8-b7a4-4ae0-af78-83c525871c90.png)
 
 chỉnh sửa `Instruction` thành `nop`. Sau đó vào Edit→Patch Program→ Apply patches to input file để lưu thay đổi này vào file gốc.
 
@@ -771,13 +770,13 @@ Ngoài ra, các bạn còn có thể làm bằng cách sử dụng plugin [keypa
 
 Chọn 1 dòng code C cần thay đổi, bấm tổ hợp `Ctrl + Alt + K`, cửa sổ hiện lên:
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2055.png)
+![Untitled 55](https://user-images.githubusercontent.com/88520787/168031356-829917fb-f55a-4d14-8608-ad37e2fdd69c.png)
 
 thay đổi thành `nop` và dùng `Apply patches to input file` để lưu file lại.
 
-![Untitled](Write-up%20Pico%20CTF%202022%20-%20Reversing%20challenge%20(12%201%208b9b1174522146e8a522cad9d048fe5a/Untitled%2056.png)
-
 Và đây là thành quả sau khi chạy file.
+
+![Untitled 56](https://user-images.githubusercontent.com/88520787/168031385-5b92932d-6474-401c-b272-62708c029af1.png)
 
 10 Màn chơi sẽ chứa các kí tự của flag theo thứ tự nhé. Chúc bạn thành công!
 
