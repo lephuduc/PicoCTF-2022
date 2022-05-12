@@ -2,7 +2,18 @@
 
 Mục lục:
 
-1. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022/edit/main/README.md#file-run1)
+1. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+2. [file-run2](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run2)
+3. [GDB Test Drive](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+4. [patchme.py](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+5. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+6. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+7. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+8. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+9. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+10. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+11. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+12. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
 
 **Trước hết bạn cần có các tools cần thiết để dùng reverse:**
 - IDA Pro
