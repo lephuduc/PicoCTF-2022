@@ -2,7 +2,7 @@
 
 Mục lục:
 
-            1. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022/edit/main/README.md)
+1. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022/edit/main/README.md#file-run1)
 
 **Trước hết bạn cần có các tools cần thiết để dùng reverse:**
 - IDA Pro
