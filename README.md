@@ -1,7 +1,10 @@
 # Write-up Pico CTF 2022 - Reversing challenge (12/12)
 
-**Trước hết bạn cần có các tools cần thiết để dùng reverse:**
+Mục lục:
 
+            1. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022/edit/main/README.md)
+
+**Trước hết bạn cần có các tools cần thiết để dùng reverse:**
 - IDA Pro
 - Detect it easy (DIE)
 - Máy ảo (Ubuntu 20.04 hoặc Kali Linux)
