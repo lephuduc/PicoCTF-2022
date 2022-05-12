@@ -4,16 +4,16 @@ Mục lục:
 
 1. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
 2. [file-run2](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run2)
-3. [GDB Test Drive](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-4. [patchme.py](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-5. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-6. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-7. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-8. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-9. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-10. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-11. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
-12. [file-run1](https://github.com/lephuduc/Write-up-PicoCTF2022#file-run1)
+3. [GDB Test Drive](https://github.com/lephuduc/Write-up-PicoCTF2022#gdb-test-drive)
+4. [patchme.py](https://github.com/lephuduc/Write-up-PicoCTF2022#patchmepy)
+5. [Safe Opener](https://github.com/lephuduc/Write-up-PicoCTF2022#safe-opener)
+6. [unpackme.py](https://github.com/lephuduc/Write-up-PicoCTF2022#unpackmepy)
+7. [bloat.py](https://github.com/lephuduc/Write-up-PicoCTF2022#bloatpy)
+8. [Fresh Java](https://github.com/lephuduc/Write-up-PicoCTF2022#fresh-java)
+9. [Bbbbloat](https://github.com/lephuduc/Write-up-PicoCTF2022#bbbbloat)
+10. [Unpackme](https://github.com/lephuduc/Write-up-PicoCTF2022#unpackme)
+11. [Keygenme](https://github.com/lephuduc/Write-up-PicoCTF2022#keygenme)
+12. [Wizardlike](https://github.com/lephuduc/Write-up-PicoCTF2022#wizardlike)
 
 **Trước hết bạn cần có các tools cần thiết để dùng reverse:**
 - IDA Pro
